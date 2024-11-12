@@ -6,13 +6,13 @@
 
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+#include "SpellBook.hpp"
 
 class Warlock {
     private:
         std::string _name;
         std::string _title;
-
-        std::map<std::string, ASpell*> _SpellBook;
+        SpellBook   _SpellBook;
 
         Warlock();
         Warlock(Warlock const &copy);

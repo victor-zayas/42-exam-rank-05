@@ -1,17 +1,17 @@
 
+#pragma once
+
 #include <iostream>
 
 class Warlock {
-
     private:
-
-        Warlock();
-        Warlock(const Warlock &copy);
-        Warlock &operator=(const Warlock &other);
-    
         std::string _name;
         std::string _title;
 
+        Warlock();
+        Warlock(Warlock const &copy);
+        Warlock &operator=(Warlock const &other);
+    
     public:
         Warlock(std::string name, std::string title);
         ~Warlock();
@@ -19,6 +19,7 @@ class Warlock {
         std::string const &getName() const;
         std::string const &getTitle() const;
 
-        void    setTitle(std::string title);
-        void   introduce() const;
+        void setTitle(std::string const title);
+
+        void introduce() const;
 };
